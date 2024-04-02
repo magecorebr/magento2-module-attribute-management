@@ -1,0 +1,26 @@
+{
+    "name": "magecorebr/magento2-module-attribute-management",
+    "description": "Magento 2 module designed to simplify EAV attribute creation and management by abstracting the underlying attribute layer, making it more accessible and manageable for developers.",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Magecore",
+            "email": "os@magecore.com.br"
+        }
+    ],
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "php": "^8.1",
+        "magento/framework": "^103.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magecore\\AttributeManagement\\": ""
+        }
+    }
+}
