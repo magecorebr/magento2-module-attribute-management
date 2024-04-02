@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+  ~ @copyright (c) 2024 Magecore
+  ~ @url https://magecore.com.br
+  ~ @author Marcio Maciel <os@magecore.com.br>
+  ~ @license See LICENSE.md in the module root directory for license information.
+  ~
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magecore\AttributeManagement\Api\ProductAttributeManagementInterface" type="Magecore\AttributeManagement\Model\ProductAttributeManagement"/>
+    <preference for="Magecore\AttributeManagement\Api\AttributeManagementInterface" type="Magecore\AttributeManagement\Model\AttributeManagement"/>
+    <preference for="Magecore\AttributeManagement\Api\AttributeSetManagementInterface" type="Magecore\AttributeManagement\Model\AttributeSetManagement"/>
+</config>
