@@ -34,12 +34,20 @@ class ProductAttributeManagement implements ProductAttributeManagementInterface
     {
         $this->attributeManagement->create(Product::ENTITY, $data['code'], $data['config']);
 
+        if (empty($data['attribute_sets'])) {
+            $data['attribute_sets'] = [
+                'Default'
+            ];
+        }
+        if (empty($data['group_name'])) {
+            $data['group_name'] = 'General';
+        }
         foreach ($data['attribute_sets'] as $attributeSetName) {
             $this->attributeSetManagement->addToAttributeSetGroup(
+                Product::ENTITY,
                 $data['code'],
                 $attributeSetName,
                 $data['group_name'],
-                Product::ENTITY,
                 $data['config']['sort_order']
             );
         }
